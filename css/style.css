@@ -250,9 +250,9 @@ h3 {
 
 h3.submenu {
     display: inline-block;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 34px;
-  margin: 10px;
+  margin: 5px;
   font-weight: normal;
 }
 .content-extra h3 {
@@ -367,6 +367,24 @@ p {
 /*------ list-services ------- */
 .list-services .thumbnail-1 {
 background-color: #ddd;  padding: 10px;
+}
+
+.list-services .thumbnail-or {
+  display: block;
+  padding: 4px;
+  line-height: 20px;
+    text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
 }
 .list-services a {
   margin-bottom: 10px;
@@ -1117,6 +1135,7 @@ footer {
   }
   .row {
     padding: 0 20px;
+      text-align: c
   }
   footer {
     padding-left: 20px;
@@ -1313,4 +1332,14 @@ a.submenu {
 a.submenu:hover {
         color :  #e85356
 
+}
+
+.submenu {
+    text-align: center;
+}
+
+
+
+.morph-or {
+    padding: 10px;
 }
