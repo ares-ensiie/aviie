@@ -25,15 +25,16 @@ module.exports = function(app, passport) {
     res.redirect('/');
   });
 
-  app.get('/login', function(req, res) {
-      res.render('login.ejs');
+  app.get('/oauth', passport.authenticate('oauth2'));
+
+   app.get('/auth',
+    passport.authenticate('oauth2', { failureRedirect: '/login' }),
+    function(req, res) {
+      // Successful authentication, redirect home.
+      res.redirect('/accueil');
     });
 
-    // process the login form
-    app.post('/login', passport.authenticate('local-login', {
-      successRedirect : '/accueil', // redirect to the secure profile section
-      failureRedirect : '/login', // redirect back to the signup page if there is an error
-    }));
+
 
     function isLoggedIn(req, res, next) {
       if (req.isAuthenticated())

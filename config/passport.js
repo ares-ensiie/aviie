@@ -7,16 +7,29 @@ module.exports = function(passport) {
     // required for persistent login sessions
     // passport needs ability to serialize and unserialize users out of session
 
+    var Token = null;
+
     // used to serialize the user for the session
     passport.serializeUser(function(user, done) {
-        done(null, user.id);
+        done(null, user.username);
     });
 
     // used to deserialize the user
-    passport.deserializeUser(function(id, done) {
-        User.findById(id, function(err, user) {
+    passport.deserializeUser(function(username, done) {
+        request( { url: "http://api.iiens.eu/users/" + username
+                   + "?access_token=" + Token
+                   + "&client_id=" + process.env.CLIENT_ID
+                   + "&client_secret=" + process.env.CLIENT_SECRET }, function(err, res, user){
+          if(err){
+            console.log("Error finding the user" + username);
+          }
+          else {
+            console.log(user);
+            var user = JSON.parse(user);
             done(err, user);
-        });
+          }
+        })
+
     });
 
     //Oauth
@@ -30,7 +43,7 @@ module.exports = function(passport) {
           done(err, me);
         }
       });
-    }
+    };
 
     passport.use(new OAuth2Strategy({
       authorizationURL: "http://www.iiens.eu/oauth/authorize",
@@ -38,23 +51,11 @@ module.exports = function(passport) {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
       callbackURL: "/auth",
-    }
-    /*function(accessToken, refreshToken, profile, done) {
-      console.log(profile);
-      User.findOne({"local.username": profile.username}, function (err, user) {
-        if(!user || err){
-          var newUser = new User();
-          newUser.local.username = profile.username;
-          newUser.save(function(err){
-            if(err) throw err;
-            return done(null, newUser);
-          })
-        }
-        else {
-          return done(err, user);
-        }
-      });
-    }*/));
-
-
+      },
+      function(accessToken, refreshToken, profile, done) {
+        Token = accessToken
+        console.log(Token)
+        return done(null, profile);
+      }
+    ));
 }
