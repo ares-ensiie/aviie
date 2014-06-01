@@ -113,7 +113,7 @@ RESPONSIVE
     }
 
     .timer_box h1{ font-size: 28px;}
-    h1{ font-size: 36px;
+    h1{ font-size: 50px;
         background-color: rgba(0,0,0);
 }
 }
@@ -635,4 +635,18 @@ min-height: 100%;
 width: auto;
 height: auto;
 z-index: -1000000;
+}
+a {
+    font-size: 30px;
+    color: white;
+    font-weight: 500; 
+
+}
+
+p {
+    font-size: 20px
+}
+
+a:hover {
+    color: white;
 }

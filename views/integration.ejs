@@ -59,12 +59,14 @@
               <h2>.avi(ie)</h2>
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
             <div class="nav-collapse nav-collapse_  collapse">
-                  <ul class="nav sf-menu">
-                <li><a href="accueil.html">Acceuil</a></li>
-                <li class="active"><a href="integration.html">Inté</a></li>
-                <li><a href="campagne.html">Campagne</a></li>
-                <li><a href="or.html">SxB d'or</a></li>
-                <li><a href="autre.html">Autre</a></li>
+                 <ul class="nav sf-menu">
+                <li><a href="/accueil">Acceuil</a></li>
+                <li class="active"><a href="/integration">Inté</a></li>
+                <li><a href="/campagne">Campagne</a></li>
+                <li><a href="/or">SxB d'or</a></li>
+                <li><a href="/autre">Autre</a></li>
+                <li><a href="/logout">Logout</a></li>
+
               </ul>
                 </div>
           </div>
@@ -95,7 +97,7 @@
 							<button type="button">Regarder</button>
 							<div class="morph-content">
                                 <div>
-                            <video src="vid/inte/2013/inte2013.mp4" controls></video>
+                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/inte/2013/inte2013.mp4" controls></video>
 								</div>									<span class="icon icon-close">Close the dialog</span>
 
 							</div>
@@ -112,7 +114,7 @@
 							<button type="button">Regarder</button>
 							<div class="morph-content">
                                 <div>
-                            <video src="vid/inte/2013/magique.mp4" controls></video>
+                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/inte/2013/magique.mp4" controls></video>
 								</div>									<span class="icon icon-close">Close the dialog</span>
 
 							</div>
@@ -129,7 +131,7 @@
 							<button type="button">Regarder</button>
 							<div class="morph-content">
                                 <div>
-                            <video src="vid/inte/2013/rallye.mp4" controls></video>
+                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/inte/2013/rallye.mp4" controls></video>
 								</div>									<span class="icon icon-close">Close the dialog</span>
 
 							</div>
@@ -139,6 +141,23 @@
           </li>
             
             
+         <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="img/inte/2013/wei.png" alt="">
+                  <section>
+                <p> Le fameux WEI !</p>
+                       <div class="morph-button morph-button-modal morph-button-modal-4 morph-button-fixed">
+							<button type="button">Regarder</button>
+							<div class="morph-content">
+                                <div>
+                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/inte/2013/wei.mp4" controls></video>
+								</div>									
+                                <span class="icon icon-close">Close the dialog</span>
+							</div>
+						</div>
+              </section>
+                </div>
+          </li>
+            
              <li class="span4">
             <div class="thumbnail thumbnail-1"> <img  src="img/inte/2013/promo.png" alt="">
                   <section>
@@ -147,7 +166,7 @@
 							<button type="button">Regarder</button>
 							<div class="morph-content">
                                 <div>
-                            <video src="vid/inte/2013/prez_piirate.mp4" controls></video>
+                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/inte/2013/prez_piirate.mp4" controls></video>
 								</div>									<span class="icon icon-close">Close the dialog</span>
 
 							</div>
@@ -186,7 +205,7 @@
 							<button type="button">Regarder</button>
 							<div class="morph-content">
                                 <div>
-                            <video src="vid/inte/2012/inte2012.mp4" controls></video>
+                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/inte/2012/inte2012.mp4" controls></video>
 								</div>									<span class="icon icon-close">Close the dialog</span>
 
 							</div>
@@ -216,5 +235,15 @@
 } );
             })();
 		</script>
+        
+       <script>
+        $(document).bind("contextmenu",function()
+{
+     // On indique au navigateur de ne pas réagir en cas de clic droit.
+     return false;
+});
+           </script>
+
+        
 </body>
 </html>

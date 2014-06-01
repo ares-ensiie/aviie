@@ -14,27 +14,27 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/superfish.js"></script>
 	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>	  
 	<script type="text/javascript" src="js/touchTouch.jquery.js"></script>
     <script src="js/modernizr.custom.js"></script>
 
 	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='js/jquery.preloader.js'></"+"script>");}	</script>
 
-	<script>
-		 jQuery(window).load(function() {
-		 $x = $(window).width();
+	<script>		
+		 jQuery(window).load(function() {	
+		 $x = $(window).width();		
 	if($x > 1024)
-	{
-	jQuery("#content .row").preloader();    }
-
-     jQuery('.magnifier').touchTouch();
-    jQuery('.spinner').animate({'opacity':0},1000,'easeOutCubic',function (){jQuery(this).css('display','none')});
-  		  });
-
+	{			
+	jQuery("#content .row").preloader();    }	
+		 
+     jQuery('.magnifier').touchTouch();			
+    jQuery('.spinner').animate({'opacity':0},1000,'easeOutCubic',function (){jQuery(this).css('display','none')});	
+  		  }); 
+				
 	</script>
 
 	<!--[if lt IE 8]>
-  		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>
+  		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>  
  	<![endif]-->
 	<!--[if (gt IE 9)|!(IE)]><!-->
 	<!--<![endif]-->
@@ -47,8 +47,8 @@
 	</head>
 
 	<body>
-		<a href="/logout">Logout</a>
-    <div class="spinner"></div>
+
+    <div class="spinner"></div> 
 <!--============================== header =================================-->
         <header>
       <div class="container clearfix">
@@ -60,12 +60,14 @@
               <h2>.avi(ie)</h2>
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
             <div class="nav-collapse nav-collapse_  collapse">
-                  <ul class="nav sf-menu">
-                <li class="active"><a href="accueil.html">Acceuil</a></li>
-                <li><a href="integration.html">Inté</a></li>
-                <li><a href="campagne.html">Campagne</a></li>
-                <li><a href="or.html">SxB d'or</a></li>
-                <li><a href="autre.html">Autre</a></li>
+                  
+<ul class="nav sf-menu">
+                <li class="active"><a href="/accueil">Acceuil</a></li>
+                <li><a href="/integration">Inté</a></li>
+                <li><a href="/campagne">Campagne</a></li>
+                <li><a href="/or">SxB d'or</a></li>
+                <li><a href="/autre">Autre</a></li>
+                <li><a href="/logout">Logout</a></li>
               </ul>
                 </div>
           </div>
@@ -76,30 +78,54 @@
   </div>
     </header>
 
+
 <div class="bg-content">
-    <img class="front" src="img/main/enavant.png" alt="" >
+    <img class="front" src="img/enavant.png" alt="" >     
   </div>
-
+      
       <!--============================== content =================================-->
-
+      
       <div id="content" class="content-extra">
           <div class="row-1">
           <div class="container">
         <div class="row">
             <h3> Les derniers ajouts !</h3>
               <ul class="thumbnails thumbnails-1">
-            <li class="span3">
+                  
+                    <li class="span3"> 
                   <div class="thumbnail thumbnail-1">
-                <h3>Promo 2014</h3>
-                <img  src="img/main/1.png" alt="">
-                <section>
-                      <p>La vidéo en l'honneur de la promotion 2014.</p>
-
+                <h3>Stras d'or 2014</h3>
+                
+                <img  src="img/or/2014.png" alt="">
+                <section> 
+                      <p>Les nouveaux champions de l'ENSIIE !</p>
+                    
                     <div class="morph-button morph-button-modal morph-button-modal-4 morph-button-fixed">
 							<button type="button">Regarder</button>
 							<div class="morph-content">
                                 <div>
-                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/inte2012.mp4" controls></video>
+                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/or/2014.mp4" controls></video>
+								</div>									<span class="icon icon-close">Close the dialog</span>
+
+							</div>
+						</div><!-- morph-button -->
+                      </section>
+              </div>
+                </li>
+                  
+            <li class="span3"> 
+                  <div class="thumbnail thumbnail-1">
+                <h3>Promo 2014</h3>
+                
+                <img  src="img/autre/prom2014.png" alt="">
+                <section> 
+                      <p>La vidéo en l'honneur de la promotion 2014.</p>
+                    
+                    <div class="morph-button morph-button-modal morph-button-modal-4 morph-button-fixed">
+							<button type="button">Regarder</button>
+							<div class="morph-content">
+                                <div>
+                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/autre/promo2014.mp4" controls></video>
 								</div>									<span class="icon icon-close">Close the dialog</span>
 
 							</div>
@@ -109,74 +135,53 @@
                 </li>
             <li class="span3">
                   <div class="thumbnail thumbnail-1">
-                <h3>Campagne Skizo</h3>
-                <img  src="img/main/2.png" alt="">
-                <section>
-                      <p>Une vidéo déjantée d'une liste qui porte bien son nom.</p>
-
+                <h3>Campagne Schizo</h3>
+                <img  src="img/campagne/schizo/schiz1.png" alt="">
+                <section> 
+                      <p>BDE EN CARTON !</p>
+                     
                        <div class="morph-button morph-button-modal morph-button-modal-4 morph-button-fixed">
 							<button type="button">Regarder</button>
 							<div class="morph-content">
                                 <div>
-                            <video src="vid/campagne/schizo/skiz1.mp4" controls></video>
+                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/campagne/schizo/skiz1.mp4" controls></video>
 								</div>									<span class="icon icon-close">Close the dialog</span>
 
 							</div>
 						</div>
-
+                      
                       </section>
               </div>
                 </li>
             <li class="span3">
                   <div class="thumbnail thumbnail-1">
-                <h3>Campagne Factiice</h3>
-                <img  src="img/main/3.png" alt="">
+                <h3>Campagne Héroiik</h3>
+                <img  src="img/campagne/heroiik/prez.png" alt="">
                 <section>
-                      <p>Factiice de retour avec un programme de qualité !</p>
+                      <p>Les héros débarquent à l'école !</p>
 
-<!--
                      <div class="morph-button morph-button-modal morph-button-modal-4 morph-button-fixed">
 							<button type="button">Regarder</button>
 							<div class="morph-content">
                                 <div>
-                            <video src="img/3a.mp4" controls></video>
+                            <video src="https://s3-eu-west-1.amazonaws.com/aviie/campagne/heroiik/prez.mp4" controls></video>
 								</div>									<span class="icon icon-close">Close the dialog</span>
 
 							</div>
 						</div>
--->
 
+                      
                       </section>
               </div>
                 </li>
-            <li class="span3">
-                  <div class="thumbnail thumbnail-1">
-                <h3 class="title-1 extra">Campagne Héroiik</h3>
-                <img  src="img/main/4.png" alt="">
-                <section>
-                      <p>La  vidéo de promotion du BDE 2014.</p>
-
-<!--
-                       <div class="morph-button morph-button-modal morph-button-modal-4 morph-button-fixed">
-							<button type="button">Regarder</button>
-							<div class="morph-content">
-                                <div>
-                            <video src="img/3a.mp4" controls></video>
-								</div>									<span class="icon icon-close">Close the dialog</span>
-
-							</div>
-						</div>
--->
-                      </section>
-              </div>
-                </li>
+            
           </ul>
             </div>
       </div>
         </div>
-
-
-
+          
+        
+    
   </div>
 
 

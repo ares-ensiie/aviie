@@ -3,14 +3,13 @@
 .morph-button {
 	position: relative;
 	display: block;
-	margin: 0 auto;
 }
 
 .morph-button > button {
 	position: relative;
 	color: black;
 	text-transform: uppercase;
-    font-size: 20px
+    font-size: 18px;
 }
 
 .morph-button.open > button {
@@ -137,8 +136,8 @@
 
 .morph-button-modal.open .morph-content {
     top : 3% !important;
-	left: 10% !important;
-	width: 80%;
+	left: 25% !important;
+	width: 50%;
 	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
 	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
 }
