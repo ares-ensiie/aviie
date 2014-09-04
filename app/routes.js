@@ -11,6 +11,11 @@ module.exports = function(app, passport) {
   app.get('/integration', isLoggedIn, function(req, res){
     res.render('integration.ejs');
   });
+    
+      app.get('/autre', isLoggedIn, function(req, res){
+    res.render('autre.ejs');
+  });
+
 
     app.get('/assassine', isLoggedIn, function(req, res){
     res.render('assassine.ejs');
@@ -48,8 +53,6 @@ module.exports = function(app, passport) {
     req.logout();
     res.render('factiice.ejs');
   });
-
-    
     
   app.get('/oauth', passport.authenticate('oauth2'));
 
