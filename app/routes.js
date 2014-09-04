@@ -12,6 +12,10 @@ module.exports = function(app, passport) {
     res.render('integration.ejs');
   });
 
+    app.get('/assassine', isLoggedIn, function(req, res){
+    res.render('assassine.ejs');
+  });
+    
   app.get('/campagne', isLoggedIn, function(req, res){
     res.render('campagne.ejs');
   });
