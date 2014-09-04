@@ -31,22 +31,22 @@ module.exports = function(app, passport) {
 
       app.get('/heroiik', function(req, res) {
     req.logout();
-    res.redirect('heroiik.ejs');
+    res.render('heroiik.ejs');
   });
 
       app.get('/schizo', function(req, res) {
     req.logout();
-    res.redirect('schizo.ejs');
+    res.render('schizo.ejs');
   });
 
       app.get('/piirate', function(req, res) {
     req.logout();
-    res.redirect('piirate.ejs');
+    res.render('piirate.ejs');
   });
 
       app.get('/factiice', function(req, res) {
     req.logout();
-    res.redirect('factiice.ejs');
+    res.render('factiice.ejs');
   });
 
     
