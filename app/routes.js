@@ -29,6 +29,28 @@ module.exports = function(app, passport) {
     res.redirect('/');
   });
 
+      app.get('/heroiik', function(req, res) {
+    req.logout();
+    res.redirect('heroiik.ejs');
+  });
+
+      app.get('/schizo', function(req, res) {
+    req.logout();
+    res.redirect('schizo.ejs');
+  });
+
+      app.get('/piirate', function(req, res) {
+    req.logout();
+    res.redirect('piirate.ejs');
+  });
+
+      app.get('/factiice', function(req, res) {
+    req.logout();
+    res.redirect('factiice.ejs');
+  });
+
+    
+    
   app.get('/oauth', passport.authenticate('oauth2'));
 
    app.get('/auth',
