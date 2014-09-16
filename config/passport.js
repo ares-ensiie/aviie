@@ -16,30 +16,29 @@ module.exports = function(passport) {
 
     // used to deserialize the user
     passport.deserializeUser(function(username, done) {
-        request( { url: "http://api.iiens.eu/users/" + username
-                   + "?access_token=" + Token
-                   + "&client_id=" + process.env.CLIENT_ID
-                   + "&client_secret=" + process.env.CLIENT_SECRET }, function(err, res, user){
-          if(err){
-            console.log("Error finding the user" + username);
-          }
-          else {
-            console.log(user);
-            var user = JSON.parse(user);
-            done(err, user);
-          }
-        })
-
+      request( {
+        url: "http://api.iiens.eu/users/" + username
+          + "?access_token=" + Token
+          + "&client_id=" + process.env.CLIENT_ID
+          + "&client_secret=" + process.env.CLIENT_SECRET,
+        json: true
+      }, function(err, res, user){
+        if(err){
+          console.log("Error finding the user" + username);
+        } else {
+          console.log(user);
+          done(err, user);
+        }
+      });
     });
 
     //Oauth
     OAuth2Strategy.prototype.userProfile = function(token, done) {
-      request({ url: "http://api.iiens.eu/users/self?access_token=" + token }, function(err, response, me) {
+      request({ url: "http://api.iiens.eu/users/self?access_token=" + token, json: true }, function(err, response, me) {
         if(err) {
           console.log("Error while retrieving personal information: " + err);
         }
         else {
-          var me = JSON.parse(me);
           done(err, me);
         }
       });
